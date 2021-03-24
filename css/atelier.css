@@ -6,10 +6,10 @@
     font-size: 0.7em;
 }
 
-#statsTable {
+.table-bordered {
     border: 2px solid #343a40;
 }
 
-#statsTable td {
+.table-bordered td {
     border-right: 1px solid #343a40;
 }
