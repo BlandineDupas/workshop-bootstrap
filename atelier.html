@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/atelier.css">
     <title>SGP - Accueil</title>
 </head>
 
@@ -39,30 +40,202 @@
             <a href="#" class="btn btn-primary">Ajouter un nouveau collaborateur</a>
         </div>
         <h1>Les collaborateurs</h1>
-        <form action="" class="d-flex justify-content-between">
-            <div class="d-flex flex-column align-items-end col-6 text-right p-0">
-                <div class="form-group d-flex justify-content-end col-12 p-0">
-                    <label for="collaboratorName" class="col-form-label col-10">Rechercher un nom ou un prénom qui commence par :&nbsp;</label>
-                    <input class="form-control" type="text" name="collaboratorName" id="collaboratorName">
+        <section>
+            <form action="" class="d-flex justify-content-between">
+                <div class="d-flex flex-column align-items-end col-6 text-right p-0">
+                    <div class="form-group d-flex justify-content-end col-12 p-0">
+                        <label for="collaboratorName" class="col-form-label col-10">Rechercher un nom ou un prénom qui commence par :&nbsp;</label>
+                        <input class="form-control" type="text" name="collaboratorName" id="collaboratorName">
+                    </div>
+                    <div class="form-group d-flex justify-content-end col-12 p-0">
+                        <label for="department" class="col-form-label col-10">Filtrer par département :&nbsp;</label>
+                        <select name="department" id="department" class="form-control">
+                            <option>Tous</option>
+                            <option value="accounts">Comptabilité</option>
+                            <option value="hr">Ressources humaines</option>
+                            <option value="it">Informatique</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group d-flex justify-content-end col-12 p-0">
-                    <label for="department" class="col-form-label col-10">Filtrer par département :&nbsp;</label>
-                    <select name="department" id="department" class="form-control">
-                        <option>Tous</option>
-                        <option value="accounts">Comptabilité</option>
-                        <option value="hr">Ressources humaines</option>
-                        <option value="it">Informatique</option>
-                    </select>
+                <div class="form-group col-2">
+                    <button type="submit" class="form-control btn btn-primary">Rechercher</button>
+                </div>
+                <div class="col-3 form-group text-right">
+                    <input type="checkbox" name="disabledCollaborators" id="disabledCollaborators" class="form-check-input">
+                    <label for="disabledCollaborators" class="form-check-label">Voir les collaborateurs désactivés</label>
+                </div>
+            </form>
+        </section>
+
+        <section class="d-flex flex-wrap justify-content-center">
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
                 </div>
             </div>
-            <div class="form-group col-2">
-                <button type="submit" class="form-control btn btn-primary">Rechercher</button>
+            
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
+                </div>
             </div>
-            <div class="col-3 form-group text-right">
-                <input type="checkbox" name="disabledCollaborators" id="disabledCollaborators" class="form-check-input">
-                <label for="disabledCollaborators" class="form-check-label">Voir les collaborateurs désactivés</label>
+
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
+                </div>
             </div>
-        </form>
+
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
+                </div>
+            </div>
+
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
+                </div>
+            </div>
+
+            <div class="card m-1">
+                <p class="card-header">NOM Prénom</p>
+                <div class="card-body d-flex flex-column">
+                    <div class="row d-flex align-items-center">
+                        <img class="img-fluid" style="max-width: 70px; max-height: 70px;" src="images/bootstrap-logo.jpg" alt="">
+                        <div class="col-9">
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Fonction</p>
+                                <p class="col-7">Chef</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Département</p>
+                                <p class="col-7">Comptabilité</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Email</p>
+                                <p class="col-7">email@email.com</p>
+                            </div>
+                            <div class="row">
+                                <p class="font-weight-bold col-5">Téléphone</p>
+                                <p class="col-7">0123456789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary align-self-end">Editer</button>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
