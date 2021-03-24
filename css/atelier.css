@@ -2,6 +2,6 @@
     min-width: 355px;
 }
 
-.card-body {
+#collaboratorsList .card-body {
     font-size: 0.7em;
 }
