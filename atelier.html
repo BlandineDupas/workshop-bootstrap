@@ -18,21 +18,52 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Collaborateurs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Statistiques</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Activités</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="Page_Web_Initiale.html">TP bootstrap</a></li>
-            <li class="nav-item active"><a class="nav-link" href="atelier.html">Atelier bootstrap</a></li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Collaborateurs</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Statistiques</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Activités</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="Page_Web_Initiale.html">TP bootstrap</a></li>
+                <li class="nav-item active"><a class="nav-link" href="atelier.html">Atelier bootstrap</a></li>
+            </ul>
         </div>
       </nav>
+
+      <main class="container">
+        <div class="d-flex justify-content-end mt-1">
+            <a href="#" class="btn btn-primary">Ajouter un nouveau collaborateur</a>
+        </div>
+        <h1>Les collaborateurs</h1>
+        <form action="" class="d-flex justify-content-between">
+            <div class="d-flex flex-column align-items-end col-6 text-right p-0">
+                <div class="form-group d-flex justify-content-end col-12 p-0">
+                    <label for="collaboratorName" class="col-form-label col-10">Rechercher un nom ou un prénom qui commence par :&nbsp;</label>
+                    <input class="form-control" type="text" name="collaboratorName" id="collaboratorName">
+                </div>
+                <div class="form-group d-flex justify-content-end col-12 p-0">
+                    <label for="department" class="col-form-label col-10">Filtrer par département :&nbsp;</label>
+                    <select name="department" id="department" class="form-control">
+                        <option>Tous</option>
+                        <option value="accounts">Comptabilité</option>
+                        <option value="hr">Ressources humaines</option>
+                        <option value="it">Informatique</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group col-2">
+                <button type="submit" class="form-control btn btn-primary">Rechercher</button>
+            </div>
+            <div class="col-3 form-group text-right">
+                <input type="checkbox" name="disabledCollaborators" id="disabledCollaborators" class="form-check-input">
+                <label for="disabledCollaborators" class="form-check-label">Voir les collaborateurs désactivés</label>
+            </div>
+        </form>
+    </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
